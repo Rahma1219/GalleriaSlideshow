@@ -1,0 +1,75 @@
+
+ 
+.painting {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+.paintingdata {
+  position: absolute;
+  color: transparent;
+  grid-area: 1/2;
+  align-self: flex-end;
+  padding: 0 0 32px 32px;
+  max-width: 90%;
+  z-index: 9;
+  transition: color 500ms ease-in-out;
+}
+
+.painting img{
+  width: 100%;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50%;
+  background: none;
+  z-index: 5;
+  opacity: 1;
+  transition: 700ms ease-in-out;
+
+}
+
+.paintingdata h2 {
+
+  margin-bottom: 6.4px;
+}
+
+.paintingdata p {
+  font-size: 13px;
+}
+
+.painting:hover .paintingdata {
+  color: #ffffff;
+}
+.painting:hover .gradient {
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.841672) 130%
+  );
+}
+
+@media(max-width: 1100px) {
+    .painting .paintingdata {
+      color: #FFFFFF;
+    }
+  
+    .gradient {
+      background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.0001) 0%,
+      rgba(0, 0, 0, 0.841672) 130%
+    );;
+    }
+  }
+  
+  @media(max-width: 650px) {
+    .paintingdata {
+      padding:20px ;
+      font-size: 13px;
+    }
+  }
